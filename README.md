@@ -1,3 +1,1 @@
 # webservice
-
-added endpoint
