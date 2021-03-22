@@ -31,3 +31,5 @@ def train_model():
 
   print("Training OK!")
   con.close()
+  
+  # Todo! Planning to add new function 
