@@ -31,9 +31,9 @@ def train_model():
 
   print("Training OK!")
   con.close()
-
-
-def predict(age, income):
+  
+  
+ def predict(age, income):
   prediction = classifier.predict(sc.transform([[age, income]]))
   prediction = True if prediction == 1 else False
   print(prediction)
