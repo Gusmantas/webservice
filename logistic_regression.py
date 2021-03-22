@@ -5,7 +5,7 @@ from sklearn.linear_model import LogisticRegression
 import sqlite3
 
 # We need two functions: One for training model and another for predicting results.
-classifier = LogisticRegression()
+classifier = LogisticRegression(random_state=1)
 sc = StandardScaler()
 
 def train_model():
@@ -22,7 +22,7 @@ def train_model():
   y = dataset.iloc[:, -1] # Our dependent variable. y - because it is displayed on y-axis
 
   # Splitting dataset into train and test sets.
-  X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25)
+  X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.20)
 
   X_train = sc.fit_transform(X_train)
   X_test = sc.fit_transform(X_test)
