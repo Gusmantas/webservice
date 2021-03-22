@@ -32,4 +32,17 @@ def train_model():
   print("Training OK!")
   con.close()
   
-  # Todo! Planning to add new function 
+  
+ def predict(age, income):
+  prediction = classifier.predict(sc.transform([[age, income]]))
+  prediction = True if prediction == 1 else False
+  print(prediction)
+
+  click_probability = classifier.predict_proba(sc.transform([[age, income]]))
+  click_probability = int(click_probability[0, 1] * 100)
+  print(click_probability)
+
+  result = {"will-click": prediction, "probability": click_probability}
+  return result
+
+  
