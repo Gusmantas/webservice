@@ -23,5 +23,12 @@ async def predict_results(req):
   return response.json(prediction)
 
 
+# When we navigate to '/' - serve the dist folder
+app.static('/', './dist')
+
+@app.exception(NotFound)
+async def ignore_404s(req, err):
+  return await response.file('./dist/index.html')
+
 if __name__ == "__main__":
   app.run(port=8000)
