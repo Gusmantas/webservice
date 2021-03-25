@@ -1,8 +1,13 @@
 # webservice
 
 
-Öppna denna mappen med terminalen (cmd på Windows command-prompt på Mac)
-Kör kommandon py -m venv env för att skapa en ny mapp med virtual environment (som kanske heter “env”)
-Navigera i terminalen till cd env -> cd scripts -> activate för att aktivera “activate.bat” filen (på mac: cd env -> cd bin -> activate)
-Navigera tillbaka två gånger cd ..-> cd ..
-Kör kommandon py -m pip install sanic pandas sklearn
+A simple webservice using Python's Sanic (for backend), jquery and ML logistic regression model.
+
+
+Open this folder with cmd (command-prompt in Mac)
+Run py `-m venv env` to create virtual environment
+Navigate to: `cd env` -> `cd scripts` -> `activate` to activatate “activate.bat” file (mac: cd env -> cd bin -> activate)
+Navate 2 steps back `cd ..`-> `cd ..`
+Run `py -m pip install sanic pandas sklearn`
+Run main.py file
+Open frontend with a url that runs in console.
